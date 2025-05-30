@@ -1,7 +1,7 @@
 # Mortal-Lava
 
 Mortal-Lava est un jeu de plateforme en JavaScript inspiré de classiques, où le joueur doit éviter la lave et collecter des pièces. Ce projet inclut un compteur automatique de morts qui s’incrémente à chaque fois que le joueur meurt et recommence le niveau.
-
+![Capture du jeu](images/screenshot.png)
 ---
 
 ## Fonctionnalités
