@@ -337,6 +337,12 @@
 
 			Level.prototype.animate = function (step, keys) {
 				if (this.status != null) this.finishDelay -= step;
+                var audio = document.getElementById('music');
+                audio.volume = 0.05;
+                    if (step > 0 && audio.paused) {
+                    audio.play();
+                    }
+
 
 				while (step > 0) {
 					var thisStep = Math.min(step, maxStep);
