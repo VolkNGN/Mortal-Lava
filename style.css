@@ -8,6 +8,13 @@
 				text-align: center;
 			}
 
+            h3 {
+				color: #666;
+				font-family: monospace;
+				text-align: center;
+			}
+            
+
 			.background {
 				table-layout: fixed;
 				border-spacing: 0;

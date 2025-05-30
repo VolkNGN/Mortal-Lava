@@ -144,6 +144,8 @@
 				],
 			];
 
+            let deaths = 0;
+
 			function Vector(x, y) {
 				this.x = x;
 				this.y = y;
@@ -479,14 +481,21 @@
 			}
 
 			function runGame(plans, Display) {
-				function startLevel(n) {
-					runLevel(new Level(plans[n]), Display, function (status) {
-						if (status == 'lost') startLevel(n);
-						else if (n < plans.length - 1) startLevel(n + 1);
-						else alert('You win!');
-					});
-				}
-				startLevel(0);
-			}
+            function startLevel(n) {
+            runLevel(new Level(plans[n]), Display, function (status) {
+                if (status == 'lost') {
+                deaths++;
+                document.getElementById('deaths').textContent = `deaths : ${deaths}`;
+                startLevel(n);
+                } else if (n < plans.length - 1) {
+                startLevel(n + 1);
+                } else {
+                alert('You win!');
+            }
+            });
+            }
+  startLevel(0);
+}
+
 
 			runGame(LEVELS, DOMDisplay);
